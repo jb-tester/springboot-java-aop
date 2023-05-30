@@ -24,6 +24,7 @@ public class NewAspect {
         System.out.println("**********************************");
 
     }
+    // !!! Advised methods are not found !!!
     @Before(value = "target(com.mytests.spring.springbootjavaaop.SampleRepo)")
     public void beforeTargetRepo(JoinPoint jp) {
         System.out.println("**********************************");

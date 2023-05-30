@@ -30,7 +30,7 @@ public class SampleAspect {
     public void methodByNamePatternAndParam(){
 
     }
-
+    // !!! Advised methods are not found !!!
     @Around("repositoryMethodsPointcut())")
     public Object aroundRepoMethodExecution(ProceedingJoinPoint jp) throws Throwable {
         System.out.println("============== Test around pointcut for the repo methods =============");
