@@ -26,6 +26,8 @@ public class SampleAspect {
     public void serviceMethodsPointcut() {
         // No code required here
     }
+
+    // !!! Advised methods in repository interface (find*()) are not found !!!
     @Pointcut("execution(* *..find*(String)) || execution(* *..display*(String))")
     public void methodByNamePatternAndParam(){
 
@@ -48,7 +50,7 @@ public class SampleAspect {
     @After("methodByNamePatternAndParam()")
     public void afterPatternMethod(JoinPoint jp){
         System.out.println("**********************************");
-        System.out.println("patern!!! " + jp.getSignature());
+        System.out.println("pattern!!! " + jp.getSignature());
         System.out.println("**********************************");
     }
 }
